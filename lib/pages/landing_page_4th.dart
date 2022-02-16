@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:guardian/widgets/map_view.dart';
+import 'package:guardian/pages/dashboard.dart';
 import '../extensions/resources.dart';
 
 class LandingPage_4th extends StatelessWidget {
@@ -20,7 +20,7 @@ class LandingPage_4th extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "Let's protect OUR children",
-                  style: R.textNormal,
+                  style: R.textHeading,
                 )),
           ),
           Expanded(
@@ -46,7 +46,7 @@ class LandingPage_4th extends StatelessWidget {
                       minimumSize: const Size.fromHeight(40)),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MapView()));
+                        MaterialPageRoute(builder: (context) => Dashboard()));
                   },
                 )),
           )

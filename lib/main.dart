@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:guardian/extensions/resources.dart';
-import 'package:guardian/widgets/landing_page_1st.dart';
+import 'package:guardian/pages/landing_page_1st.dart';
 
 void main() {
   runApp(const MyApp());

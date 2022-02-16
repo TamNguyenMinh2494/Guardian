@@ -14,9 +14,14 @@ class R {
       fontSize: 40,
       color: R.colorPrimary,
       fontWeight: FontWeight.bold);
-  static TextStyle textNormal = TextStyle(
+  static TextStyle textHeading = TextStyle(
       fontFamily: 'MavenPro',
       fontSize: 35,
+      color: R.colorBlack,
+      fontWeight: FontWeight.bold);
+  static TextStyle textNormal = TextStyle(
+      fontFamily: 'MavenPro',
+      fontSize: 20,
       color: R.colorBlack,
       fontWeight: FontWeight.bold);
 }

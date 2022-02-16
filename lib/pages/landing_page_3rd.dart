@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:guardian/widgets/landing_page_3rd.dart';
+import 'package:guardian/pages/dashboard.dart';
+import 'package:guardian/pages/landing_page_4th.dart';
 import '../extensions/resources.dart';
 
-class LandingPage_2nd extends StatelessWidget {
-  const LandingPage_2nd({Key? key}) : super(key: key);
+class LandingPage_3rd extends StatelessWidget {
+  const LandingPage_3rd({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +20,8 @@ class LandingPage_2nd extends StatelessWidget {
             child: Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "12% of children were physically abuse in the past year - WHO",
-                  style: R.textNormal,
+                  "Violence against children can be prevented",
+                  style: R.textHeading,
                 )),
           ),
           Expanded(
@@ -28,7 +29,7 @@ class LandingPage_2nd extends StatelessWidget {
             child: Container(
               alignment: Alignment.center,
               child: Image.asset(
-                "assets/images/violent.png",
+                "assets/images/shield.png",
                 fit: BoxFit.contain,
                 width: MediaQuery.of(context).size.height * 0.4,
               ),
@@ -50,14 +51,19 @@ class LandingPage_2nd extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const LandingPage_3rd()));
+                                builder: (context) => const LandingPage_4th()));
                       },
                     ),
                     OutlinedButton(
                       child: const Text('SKIP'),
                       style: OutlinedButton.styleFrom(
                           minimumSize: const Size.fromHeight(40)),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Dashboard()));
+                      },
                     ),
                   ],
                 )),

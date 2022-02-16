@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:guardian/widgets/landing_page_4th.dart';
+import 'package:guardian/pages/dashboard.dart';
+import 'package:guardian/pages/landing_page_2nd.dart';
 import '../extensions/resources.dart';
 
-class LandingPage_3rd extends StatelessWidget {
-  const LandingPage_3rd({Key? key}) : super(key: key);
+class LandingPage_1st extends StatelessWidget {
+  const LandingPage_1st({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,21 +15,27 @@ class LandingPage_3rd extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(
-                left: 10.0, top: MediaQuery.of(context).size.width * 0.2),
+            padding:
+                EdgeInsets.only(top: MediaQuery.of(context).size.width * 0.2),
             child: Container(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "Violence against children can be prevented",
-                  style: R.textNormal,
-                )),
+                alignment: Alignment.center,
+                child: Column(children: [
+                  Text(
+                    "Guardian",
+                    style: R.textTitle,
+                  ),
+                  Text(
+                    "Save our children",
+                    style: R.textHeading,
+                  ),
+                ])),
           ),
           Expanded(
             flex: 2,
             child: Container(
               alignment: Alignment.center,
               child: Image.asset(
-                "assets/images/shield.png",
+                "assets/images/international-childrens-day.png",
                 fit: BoxFit.contain,
                 width: MediaQuery.of(context).size.height * 0.4,
               ),
@@ -43,21 +50,26 @@ class LandingPage_3rd extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     ElevatedButton(
-                      child: const Text('NEXT'),
+                      child: const Text('START'),
                       style: ElevatedButton.styleFrom(
                           minimumSize: const Size.fromHeight(40)),
                       onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const LandingPage_4th()));
+                                builder: (context) => const LandingPage_2nd()));
                       },
                     ),
                     OutlinedButton(
                       child: const Text('SKIP'),
                       style: OutlinedButton.styleFrom(
                           minimumSize: const Size.fromHeight(40)),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => Dashboard())));
+                      },
                     ),
                   ],
                 )),
